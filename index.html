@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casa Escuela Splash</title>
+    <title>Casa Escuela Splash – Jardín infantil y talleres artísticos en Concepción</title>
+
+    <!-- SEO & Social -->
+    <meta name="description" content="Casa Escuela Splash: escuela infantil desde sala cuna a segundo básico, after‑school, cowork familiar y talleres artísticos en Concepción. Aprender jugando y crecer en comunidad." />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <meta property="og:title" content="Casa Escuela Splash – Aprender jugando y en comunidad" />
+    <meta property="og:description" content="Escuela desde sala cuna a 2º básico, after‑school, cowork y talleres artísticos para familias en Concepción." />
+    <meta property="og:image" content="https://pascuwork.github.io/casa-escuela-splash/img/og-cover.jpg" />
+    <meta property="og:url" content="https://pascuwork.github.io/casa-escuela-splash/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,7 +37,6 @@
       .spin { animation: spin 28s linear infinite; }
       @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
       .float { animation: float 5s ease-in-out infinite; }
-      /* simple fade carousel */
       .slide { opacity: 0; transition: opacity 1s ease-in-out; }
       .slide.active { opacity: 1; }
     </style>
@@ -35,18 +45,20 @@
     <!-- NAV -->
     <header class="sticky top-0 z-30 bg-[var(--niebla)]/90 backdrop-blur border-b">
       <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <!-- Logo placeholder  -->
+        <!-- Logo único a color -->
         <a href="#" class="flex items-center gap-2">
-          <img src="img/logo-splash.png" alt="Casa Escuela Splash" class="h-24 w-auto" />
+          <img src="img/logo-splash.png" alt="Logo Casa Escuela Splash" class="h-20 w-auto" loading="lazy" />
           <span class="sr-only">Casa Escuela Splash</span>
         </a>
         <nav class="hidden md:block">
           <ul class="flex gap-8 font-semibold text-sm">
-            <li><a href="#historia"  class="hover:text-[var(--musgo)]">Historia</a></li>
-            <li><a href="#mision"    class="hover:text-[var(--musgo)]">Proyecto Educativo</a></li>
-            <li><a href="#servicios" class="hover:text-[var(--musgo)]">Servicios</a></li>
-            <li><a href="#convenios" class="hover:text-[var(--musgo)]">Convenios</a></li>
-            <li><a href="#contacto"  class="hover:text-[var(--musgo)]">Contacto</a></li>
+            <li><a href="#historia"   class="hover:text-[var(--musgo)]">Historia</a></li>
+            <li><a href="#mision"     class="hover:text-[var(--musgo)]">Proyecto Educativo</a></li>
+            <li><a href="#servicios"  class="hover:text-[var(--musgo)]">Servicios</a></li>
+            <li><a href="#equipo"     class="hover:text-[var(--musgo)]">Equipo</a></li>
+            <li><a href="#convenios"  class="hover:text-[var(--musgo)]">Redes de colaboración</a></li>            
+            <li><a href="#contacto"   class="hover:text-[var(--musgo)]">Contacto</a></li>            
+            <li><a href="#reviews"    class="hover:text-[var(--musgo)]">Opiniones</a></li>
           </ul>
         </nav>
       </div>
@@ -61,21 +73,18 @@
       <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-[var(--musgo)]">Aprender jugando,<br>crecer en comunidad</h1>
-          <p class="text-lg md:text-xl mb-8"> Una forma de aprendizaje <span class="text-[#C8A48B]">creativa</span> y cercana a la familia. </p>
+          <p class="text-lg md:text-xl mb-8">Una forma de aprendizaje <span class="text-[#C8A48B]">creativa</span> y cercana a la familia.</p>
           <a href="#mision" class="inline-block bg-[var(--musgo)] hover:bg-[var(--arena)] transition text-white font-semibold px-7 py-3 rounded-full shadow-lg">Descubre nuestro enfoque</a>
         </div>
         <!-- SIMPLE CAROUSEL -->
         <div class="relative w-72 md:w-96 aspect-square mx-auto">
-          <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=60" class="slide absolute inset-0 w-full h-full object-cover rounded-3xl active" alt="niños 1" />
-          <img src="https://media.timeout.com/images/106092904/750/562/image.jpg" class="slide absolute inset-0 w-full h-full object-cover rounded-3xl" alt="niños 2" />
-          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=60" class="slide absolute inset-0 w-full h-full object-cover rounded-3xl" alt="niños 3" />
+          <img src="img/hero1.jpg" class="slide absolute inset-0 w-full h-full object-cover rounded-3xl active" alt="Niños pintando" loading="lazy" />
+          <img src="img/hero2.jpg" class="slide absolute inset-0 w-full h-full object-cover rounded-3xl" alt="Niñas jugando" loading="lazy" />
+          <img src="img/hero3.jpg" class="slide absolute inset-0 w-full h-full object-cover rounded-3xl" alt="Clase al aire libre" loading="lazy" />
         </div>
       </div>
 
-      <!-- wave divider (flipped to match arena background) -->
-      <svg class="absolute bottom-0 w-full rotate-180" viewBox="0 0 1440 80" preserveAspectRatio="none">
-        <path fill="var(--arena)" d="M0,64L48,58.7C96,53,192,43,288,37.3C384,32,480,32,576,42.7C672,53,768,75,864,80C960,85,1056,75,1152,64C1248,53,1344,43,1392,37.3L1440,32L1440,0L0,0Z" />
-      </svg>
+      <svg class="absolute bottom-0 w-full rotate-180" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="var(--arena)" d="M0,64L48,58.7C96,53,192,43,288,37.3C384,32,480,32,576,42.7C672,53,768,75,864,80C960,85,1056,75,1152,64C1248,53,1344,43,1392,37.3L1440,32L1440,0L0,0Z"/></svg>
     </section>
 
     <!-- HISTORIA -->
@@ -186,93 +195,216 @@
         </div>
     </section>
 
-    <!-- SERVICIOS (tarjetas lúdicas) -->
+    <!-- SERVICIOS (cards) -->
     <section id="servicios" class="relative z-10 bg-[var(--cielo)]/40 py-20 md:py-24">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center text-[var(--musgo)]">Servicios</h2>
-
-        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          <!-- Jardín -->
+        <div class="grid gap-10 lg:grid-cols-4 sm:grid-cols-2">
+          <!-- Sala de Cowork (primero) -->
           <article class="group rounded-3xl overflow-hidden shadow-xl bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=60"
-                alt="Jardín Infantil"
-                class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="img/servicio-cowork.jpg" alt="Sala de Cowork" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             <div class="p-6 text-center">
-              <h4 class="flex items-center justify-center gap-2 font-bold text-lg text-[var(--musgo)]"><span>🌱</span>Jardín Infantil</h4>
-              <p class="text-sm mt-2">Sala cuna, pre‑kínder y kínder.</p>
+              <h4 class="flex items-center justify-center gap-2 font-bold text-lg text-[var(--arena)]"><span>💻</span>Espacio Cowork</h4>
+              <p class="text-sm mt-2">Área de teletrabajo para familias con wifi y café ilimitado.</p>
+            </div>
+          </article>
+
+          <!-- Escuela (sustituye Jardín) -->
+          <article class="group rounded-3xl overflow-hidden shadow-xl bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="img/servicio-escuela.jpg" alt="Escuela infantil" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="p-6 text-center">
+              <h4 class="flex items-center justify-center gap-2 font-bold text-sm md:text-base text-[var(--musgo)]"><span>🏫</span>ESCUELA · SALA CUNA, PRE‑KÍNDER, KÍNDER, 1º–2º BÁSICO</h4>
+              <p class="text-xs mt-2 leading-relaxed">
+                Jornadas:<br>AM 8:30‑13:30 · Media 8:30‑16:00 · Completa 8:30‑18:30
+              </p>
             </div>
           </article>
 
           <!-- After School -->
           <article class="group rounded-3xl overflow-hidden shadow-xl bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYq-MreqBvZiyNh3UbfyUz4NVLN8ML0JMjsxk47D_d7aqnY8EICHWlDG6UOFrU1wfQ0CLzZYeGsaajTbEiTvmYqBmyl1AsypEqoDCOe9y054Ydk2W70ugM-L_2b8-kF3wujUldcz6XMvc/s1600/Colores+1.jpg"
-                alt="After School"
-                class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="img/servicio-afterschool.jpg" alt="After School" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             <div class="p-6 text-center">
-              <h4 class="flex items-center justify-center gap-2 font-bold text-lg text-[var(--lavanda)]"><span>🎒</span>After School</h4>
-              <p class="text-sm mt-2">Juegos y apoyo tras clases.</p>
+              <h4 class="flex items-center justify-center gap-2 font-bold text-lg text-[var(--lavanda)]"><span>🚌</span>After‑School</h4>
+              <p class="text-sm mt-2">Programa vespertino (15:30‑18:30) con apoyo de tareas, juego libre y colación saludable.</p>
             </div>
           </article>
 
           <!-- Talleres Artísticos -->
           <article class="group rounded-3xl overflow-hidden shadow-xl bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=60"
-                alt="Talleres Artísticos"
-                class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="img/servicio-talleres.jpg" alt="Talleres artísticos" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             <div class="p-6 text-center">
               <h4 class="flex items-center justify-center gap-2 font-bold text-lg text-[var(--rosa)]"><span>🎨</span>Talleres Artísticos</h4>
-              <p class="text-sm mt-2">Arte para niños y adultos.</p>
-            </div>
-          </article>
-
-          <!-- Sala de Cowork -->
-          <article class="group rounded-3xl overflow-hidden shadow-xl bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="https://revistaestilopropio.com/wp-content/uploads/2020/02/SH-Hollywood-SCA-6313-Copiar-844x844.jpg"
-                alt="Sala de Cowork"
-                class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div class="p-6 text-center">
-              <h4 class="flex items-center justify-center gap-2 font-bold text-lg text-[var(--arena)]"><span>💻</span>Sala de Cowork</h4>
-              <p class="text-sm mt-2">Espacio para mapadres y teletrabajo.</p>
+              <p class="text-sm mt-2">Clases de arte, música y expresión corporal para infancias **y** adultos.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CONVENIOS -->
-    <!-- CONVENIOS (logotipos clicables con hover) -->
+    <!-- EQUIPO (placeholder con fotos) -->
+    <section id="equipo" class="relative z-10 bg-[var(--cielo)]/30 py-20 md:py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center text-[var(--musgo)]">Nuestro Equipo</h2>
+        <div class="grid gap-10 md:grid-cols-3">
+          <!-- Guías -->
+          <article class="text-center"><img src="img/guia1.jpg" class="mx-auto rounded-full h-40 w-40 object-cover mb-4" alt="Guía educadora 1" loading="lazy"><h3 class="font-semibold">Nombre Guía 1</h3><p class="text-xs text-slate-600">Educadora de párvulos</p></article>
+          <article class="text-center"><img src="img/guia2.jpg" class="mx-auto rounded-full h-40 w-40 object-cover mb-4" alt="Guía educadora 2" loading="lazy"><h3 class="font-semibold">Nombre Guía 2</h3><p class="text-xs text-slate-600">Educadora de párvulos</p></article>
+          <!-- Estudiantes en práctica -->
+          <article class="text-center"><img src="img/practicante-group.jpg" class="mx-auto rounded-full h-40 w-40 object-cover mb-4" alt="Estudiantes en práctica" loading="lazy"><h3 class="font-semibold">Estudiantes en práctica</h3><p class="text-xs text-slate-600">Futuros educadores U.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REDES DE COLABORACIÓN ------------------------------------------->
     <section id="convenios" class="relative z-10 bg-[var(--niebla)] py-20 md:py-24">
-      <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center text-[var(--musgo)]">Nuestra Red de Apoyo</h2>
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center text-[var(--musgo)]">
+          Redes de colaboración
+        </h2>
 
-        <div class="flex flex-wrap justify-center gap-10">
-          <!-- LOGO 1 -->
-          <a href="#" target="_blank" class="block h-24 w-24 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl">
-            <img src="img/convenio1.png" alt="Convenio 1" class="h-full w-full object-contain rounded-2xl shadow-lg" />
-          </a>
-          <!-- LOGO 2 SPORTLIFE -->
-          <a href="https://www.sportlife.cl/sportlife-compra/?gad_source=1&gad_campaignid=22295405668&gbraid=0AAAAA-iW0cstIoJ5K0WM_82C6FAHYrXxy&gclid=Cj0KCQjwxo_CBhDbARIsADWpDH5f3vkErm6Yr8g4eE1_uUNr3iqs5yCs_MKT8OpgiJyOYTL5eRNegOgaApmBEALw_wcB" target="_blank" class="block h-24 w-24 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl">
-            <img src="img/convenio2.png" alt="Convenio 2" class="h-full w-full object-contain rounded-2xl shadow-lg" />
-          </a>
-          <!-- LOGO 3 PIñitas-->
-          <a href="https://www.pinitastienda.cl/?srsltid=AfmBOopwFCBviDd29XDCNFvNI3SaS0oFX2PKIk84ERd5vN8gDOgU2c5p" target="_blank" class="block h-24 w-24 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl">
-            <img src="img/convenio3.png" alt="Convenio 3" class="h-full w-full object-contain rounded-2xl shadow-lg" />
-          </a>
-          <!-- LOGO 4 -->
-          <a href="https://www.uc.cl/" target="_blank" class="block h-24 w-24 transition-transform duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl">
-            <img src="img/convenio4.png" alt="Convenio 4" class="h-full w-full object-contain rounded-2xl shadow-lg" />
-          </a>
+        <!-- carrusel horizontal infinito -->
+        <div class="logos">
+          <div class="logos-track">
+            <!-- lote 1 -->
+            <a href="https://ucsc.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-ucsc.png" alt="UCSC"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="https://www.pinitastienda.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-pinitas.png" alt="Piñitas"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="https://www.instagram.com/muma.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-muma.png" alt="Muma Chile"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="https://www.louder.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-louder.png" alt="Louder Pro"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="https://zonasur.sportlife.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-sportlifezs.png" alt="SportLife Zona Sur"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="#" target="_blank" class="h-24 w-24">
+              <img src="img/logo-calarmonia.png" alt="Calarmonía"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="#" target="_blank" class="h-24 w-24">
+              <img src="img/logo-melchor.png" alt="La Fecha de Melchor"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="#" target="_blank" class="h-24 w-24">
+              <img src="img/logo-animate.png" alt="Anímate"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+
+            <!-- lote 2 (duplicado para loop suave) -->
+            <a href="https://ucsc.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-ucsc.png" alt="UCSC"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="https://www.pinitastienda.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-pinitas.png" alt="Piñitas"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="https://www.instagram.com/muma.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-muma.png" alt="Muma Chile"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="https://www.louder.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-louder.png" alt="Louder Pro"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="https://zonasur.sportlife.cl" target="_blank" class="h-24 w-24">
+              <img src="img/logo-sportlifezs.png" alt="SportLife Zona Sur"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="#" target="_blank" class="h-24 w-24">
+              <img src="img/logo-calarmonia.png" alt="Calarmonía"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="#" target="_blank" class="h-24 w-24">
+              <img src="img/logo-melchor.png" alt="La Fecha de Melchor"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+            <a href="#" target="_blank" class="h-24 w-24">
+              <img src="img/logo-animate.png" alt="Anímate"
+                  class="h-full w-full object-contain rounded-2xl shadow-lg" loading="lazy" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACTO -->
+<!-- Estilos (añade o conserva en tu <style>) -->
+<style>
+  /* carrusel horizontal infinito */
+  @keyframes scrollX {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 1.25rem)); }
+  }
+  .logos       { overflow: hidden; }
+  .logos-track { display: flex; gap: 2.5rem; width: max-content;
+                 animation: scrollX 40s linear infinite; }
+  /* pausa al pasar el mouse */
+  .logos:hover .logos-track { animation-play-state: paused; }
+</style>
+
+
     <section id="contacto" class="relative z-10 bg-[var(--rosa)]/30 py-20 md:py-24">
-      <div class="max-w-3xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6 text-[var(--musgo)]">Contacto</h2>
-        <p class="mb-2">Dirección: Los Aguilera #225, Concepción</p>
-        <p class="mb-8">Correo: contacto@splash.cl</p>
-        <a href="https://wa.me/56938716859" target="_blank" class="inline-block bg-[var(--musgo)] hover:bg-[var(--arena)] transition text-white font-semibold px-7 py-3 rounded-full shadow-lg">WhatsApp</a>
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center text-[var(--musgo)]">Contacto</h2>
+        <div class="grid gap-12 md:grid-cols-2 items-start">
+
+          <!-- Mapa a la izquierda -->
+          <div>
+            <div class="w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://maps.google.com/maps?q=Casa%20Escuela%20Splash%20-%20Los%20Aguilera%20225%2C%204030000%20Concepci%C3%B3n%2C%20B%C3%ADo%20B%C3%ADo&z=15&output=embed"
+                width="100%" height="100%" frameborder="0" style="border:0;"
+                allowfullscreen loading="lazy" class="rounded-3xl"
+              ></iframe>
+            </div>
+            <div class="text-center mt-4">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Casa+Escuela+Splash+-+Los+Aguilera+225%2C+4030000+Concepci%C3%B3n%2C+Bi%C3%B1o+Bi%C3%B1o"
+                target="_blank"
+                class="inline-block bg-[var(--musgo)] hover:bg-[var(--arena)] transition text-white font-semibold px-6 py-3 rounded-full shadow-lg"
+              >
+                Cómo llegar
+              </a>
+            </div>
+          </div>
+
+          <!-- Formulario a la derecha -->
+          <form class="space-y-6 bg-white p-8 rounded-3xl shadow-xl">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+              <input type="text" id="name" name="name" required
+                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-[var(--musgo)] focus:ring focus:ring-[var(--musgo)]/50"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+              <input type="email" id="email" name="email" required
+                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-[var(--musgo)] focus:ring focus:ring-[var(--musgo)]/50"
+              />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+              <textarea id="message" name="message" rows="4" required
+                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-[var(--musgo)] focus:ring focus:ring-[var(--musgo)]/50"
+              ></textarea>
+            </div>
+            <button type="submit"
+              class="w-full inline-block bg-[var(--musgo)] hover:bg-[var(--arena)] transition text-white font-semibold px-6 py-3 rounded-full shadow-lg"
+            >
+              Enviar mensaje
+            </button>
+          </form>
+
+        </div>
       </div>
     </section>
 
@@ -374,7 +506,6 @@
     });
     </script>
 
-    
     <!-- FOOTER -->
     <footer class="bg-white border-t py-8 text-center text-sm text-slate-500">
       <div class="flex justify-center gap-6 mb-4">
