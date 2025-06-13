@@ -1,44 +1,262 @@
+/* 1. Variables de color */
+:root {
+  --musgo: #A8C6A1;
+  --cielo: #BFDDE9;
+  --arena: #EADBC8;
+  --lavanda: #D8CCE3;
+  --niebla: #F2F4F1;
+  --rosa: #F6D9D5;
+}
+
+/* 2. Reset y tipografía global */
+html {
+  scroll-behavior: smooth;
+}
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #fff;
-    color: #111;
-    margin: 0;
-    padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--niebla);
+  color: #111;
+  margin: 0;
+  padding: 0;
 }
+
+/* 3. Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  /* fondo semitransparente con el color de --niebla al 90% de opacidad */
+  background-color: rgba(242, 244, 241, 0.2);
+  /* difuminado de lo que queda detrás */
+  backdrop-filter: blur(10px);
+  /* línea muy tenue con 20% de opacidad */
+  border-bottom: 1px solid rgba(168, 198, 161, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+
+
+/* 4. Navegación */
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 nav a {
-    text-decoration: none;
-    color: #333;
+  text-decoration: none;
+  color: #333;
 }
+
+/* 5. Hero (si lo usas con clase .hero) */
 .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: #f0f4ff;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f0f4ff;
 }
+
+/* 6. Secciones */
 section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
+  padding: 2rem;
 }
+
+/* Contenedor centrado solo en pantallas grandes */
+.section-inner {
+  /* en móviles ocupa el 100% */
+  width: 100%;
+  padding: 0 1rem; /* un poco de espacio a los lados */
+  box-sizing: border-box;
+}
+
+/* a partir de 768px centramos y limitamos ancho */
+@media (min-width: 768px) {
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0; /* el padding lo maneja el section */
+  }
+}
+
+
+/* 7. Footer */
 footer {
-    text-align: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+/* 8. Animaciones y utilidades */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spin {
+  animation: spin 28s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* 9. Carrusel fade (hero) */
+.slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+}
+
+/* 10. Carrusel logos (scroll infinito) */
+@keyframes scrollX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 1.25rem)); }
+}
+.logos {
+  overflow: hidden;
+}
+.logos-track {
+  display: flex;
+  gap: 2.5rem;
+  width: max-content;
+  animation: scrollX 40s linear infinite;
+}
+.logos:hover .logos-track {
+  animation-play-state: paused;
+}
+.logos img {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* 11. Botones */
+button {
+  background-color: var(--musgo);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+button:hover {
+  filter: brightness(90%);
+}
+
+/* 12. Formularios */
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+input:focus, textarea:focus {
+  border-color: var(--musgo);
+  outline: none;
+}
+
+/* 13. Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+table th, table td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+table th {
+  background-color: var(--cielo);
+  color: #333;
+}
+table tr:nth-child(even) {
+  background-color: var(--arena);
+}
+table tr:hover {
+  background-color: var(--lavanda);
+}
+
+/* 14. Listas */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* 15. Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 16. Iconos */
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--musgo);
+  vertical-align: middle;
+}
+
+/* 17. Media Queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero {
+    padding: 2rem 1rem;
+  }
+  section {
     padding: 1rem;
-    font-size: 0.875rem;
-    background-color: #fafafa;
-    border-top: 1px solid #eee;
+  }
+}
+
+/* 18. Accesibilidad */
+:focus {
+  outline: 2px solid var(--musgo);
+  outline-offset: 2px;
+}
+
+/* 19. Tema oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111;
+    color: #f0f0f0;
+  }
+  header, footer {
+    background-color: #222;
+    border-color: #444;
+  }
+  nav a {
+    color: #ddd;
+  }
+  section {
+    background-color: #333;
+    color: #eee;
+  }
+  table th {
+    background-color: var(--cielo);
+    color: #111;
+  }
+  table tr:nth-child(even) {
+    background-color: var(--arena);
+  }
 }

@@ -6,85 +6,87 @@
     <title>Casa Escuela Splash – Jardín infantil y talleres artísticos en Concepción</title>
 
     <!-- SEO & Social -->
-    <meta name="description" content="Casa Escuela Splash: escuela infantil desde sala cuna a segundo básico, after‑school, cowork familiar y talleres artísticos en Concepción. Aprender jugando y crecer en comunidad." />
+    <meta name="description" content="Casa Escuela Splash: escuela infantil desde sala cuna a segundo básico, after-school, cowork familiar y talleres artísticos en Concepción. Aprender jugando y crecer en comunidad." />
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <meta property="og:title" content="Casa Escuela Splash – Aprender jugando y en comunidad" />
-    <meta property="og:description" content="Escuela desde sala cuna a 2º básico, after‑school, cowork y talleres artísticos para familias en Concepción." />
+    <meta property="og:description" content="Escuela desde sala cuna a 2º básico, after-school, cowork y talleres artísticos para familias en Concepción." />
     <meta property="og:image" content="https://pascuwork.github.io/casa-escuela-splash/img/og-cover.jpg" />
     <meta property="og:url" content="https://pascuwork.github.io/casa-escuela-splash/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_CL" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS (solo si quieres seguir usándolo) -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) para animaciones -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <style>
-      :root {
-        --musgo: #A8C6A1;
-        --cielo: #BFDDE9;
-        --arena: #EADBC8;
-        --lavanda: #D8CCE3;
-        --niebla: #F2F4F1;
-        --rosa:   #F6D9D5;
-      }
-      html { scroll-behavior: smooth; }
-      body { font-family: 'Quicksand', sans-serif; background: var(--niebla); color: #494949; }
-      @keyframes spin { to { transform: rotate(360deg); } }
-      .spin { animation: spin 28s linear infinite; }
-      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-      .float { animation: float 5s ease-in-out infinite; }
-      .slide { opacity: 0; transition: opacity 1s ease-in-out; }
-      .slide.active { opacity: 1; }
-    </style>
+    <!-- Tu Custom Styles -->
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
+
   <body>
     <!-- NAV -->
-    <header class="sticky top-0 z-30 bg-[var(--niebla)]/90 backdrop-blur border-b">
+    <header>
       <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <!-- Logo único a color -->
-        <a href="#" class="flex items-center gap-2">
+        <!-- Le añadí class="logo" para que tu style.css lo pille -->
+        <a href="#" class="logo flex items-center gap-2">
           <img src="img/logo-splash.png" alt="Logo Casa Escuela Splash" class="h-20 w-auto" loading="lazy" />
           <span class="sr-only">Casa Escuela Splash</span>
         </a>
         <nav class="hidden md:block">
           <ul class="flex gap-8 font-semibold text-sm">
-            <li><a href="#historia"   class="hover:text-[var(--musgo)]">Historia</a></li>
-            <li><a href="#mision"     class="hover:text-[var(--musgo)]">Proyecto Educativo</a></li>
-            <li><a href="#servicios"  class="hover:text-[var(--musgo)]">Servicios</a></li>
-            <li><a href="#equipo"     class="hover:text-[var(--musgo)]">Equipo</a></li>
-            <li><a href="#convenios"  class="hover:text-[var(--musgo)]">Redes de colaboración</a></li>            
-            <li><a href="#contacto"   class="hover:text-[var(--musgo)]">Contacto</a></li>            
-            <li><a href="#reviews"    class="hover:text-[var(--musgo)]">Opiniones</a></li>
+            <li><a href="#historia" class="hover:text-[var(--musgo)]">Historia</a></li>
+            <li><a href="#mision"   class="hover:text-[var(--musgo)]">Proyecto Educativo</a></li>
+            <li><a href="#servicios"class="hover:text-[var(--musgo)]">Servicios</a></li>
+            <li><a href="#equipo"   class="hover:text-[var(--musgo)]">Equipo</a></li>
+            <li><a href="#convenios"class="hover:text-[var(--musgo)]">Redes de colaboración</a></li>
+            <li><a href="#contacto" class="hover:text-[var(--musgo)]">Contacto</a></li>
+            <li><a href="#reviews"  class="hover:text-[var(--musgo)]">Opiniones</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
+    <!-- WhatsApp floating button -->
+    <a href="https://wa.me/56987323747"
+       target="_blank" rel="noopener"
+       class="fixed bottom-6 right-6 z-50 bg-[var(--musgo)] hover:bg-[var(--arena)] p-4 rounded-full shadow-xl transition">
+      <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+           alt="WhatsApp" class="w-6 h-6" />
+    </a>
+
     <!-- HERO -->
     <section class="relative overflow-hidden bg-[var(--niebla)] pt-24 pb-52 isolate">
-      <!-- decor -->
       <div class="absolute top-20 left-10 w-24 h-24 bg-[var(--cielo)] rounded-full opacity-70 float"></div>
       <div class="absolute top-40 right-24 w-16 h-16 bg-[var(--lavanda)] rounded-full opacity-70 float" style="animation-delay:1s"></div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-[var(--musgo)]">Aprender jugando,<br>crecer en comunidad</h1>
-          <p class="text-lg md:text-xl mb-8">Una forma de aprendizaje <span class="text-[#C8A48B]">creativa</span> y cercana a la familia.</p>
-          <a href="#mision" class="inline-block bg-[var(--musgo)] hover:bg-[var(--arena)] transition text-white font-semibold px-7 py-3 rounded-full shadow-lg">Descubre nuestro enfoque</a>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-[var(--musgo)]">
+            Aprender jugando,<br>crecer en comunidad
+          </h1>
+          <p class="text-lg md:text-xl mb-8">
+            Una forma de aprendizaje <span class="text-[#C8A48B]">creativa</span> y cercana a la familia.
+          </p>
+          <a href="#mision" class="inline-block bg-[var(--musgo)] hover:bg-[var(--arena)] transition text-white font-semibold px-7 py-3 rounded-full shadow-lg">
+            Descubre nuestro enfoque
+          </a>
         </div>
-        <!-- SIMPLE CAROUSEL -->
         <div class="relative w-72 md:w-96 aspect-square mx-auto">
-          <img src="img/hero1.jpg" class="slide absolute inset-0 w-full h-full object-cover rounded-3xl active" alt="Niños pintando" loading="lazy" />
-          <img src="img/hero2.jpg" class="slide absolute inset-0 w-full h-full object-cover rounded-3xl" alt="Niñas jugando" loading="lazy" />
-          <img src="img/hero3.jpg" class="slide absolute inset-0 w-full h-full object-cover rounded-3xl" alt="Clase al aire libre" loading="lazy" />
+          <img src="img/hero1.jpg" class="slide active" alt="Niños pintando" loading="lazy" />
+          <img src="img/hero2.jpg" class="slide"       alt="Niñas jugando" loading="lazy" />
+          <img src="img/hero3.jpg" class="slide"       alt="Clase al aire libre" loading="lazy" />
         </div>
       </div>
 
-      <svg class="absolute bottom-0 w-full rotate-180" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="var(--arena)" d="M0,64L48,58.7C96,53,192,43,288,37.3C384,32,480,32,576,42.7C672,53,768,75,864,80C960,85,1056,75,1152,64C1248,53,1344,43,1392,37.3L1440,32L1440,0L0,0Z"/></svg>
+      <svg class="absolute bottom-0 w-full rotate-180" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path fill="var(--arena)" d="M0,64L48,58.7C96,53,192,43,288,37.3C384,32,480,32,576,42.7C672,53,768,75,864,80C960,85,1056,75,1152,64C1248,53,1344,43,1392,37.3L1440,32L1440,0L0,0Z"/>
+      </svg>
     </section>
 
     <!-- HISTORIA -->
@@ -154,10 +156,7 @@
       </div>
     </section>
 
-    <!-- MISION / VISION / PRINCIPIOS -->
-    <!-- MISION / VISION / PRINCIPIOS (plegables) -->
-    <!-- MISION / VISION / PRINCIPIOS (plegables bonitos) -->
-    <!-- MISION / VISION / PRINCIPIOS (tarjetas animadas) -->
+    <!-- MISION / VISION / PRINCIPIOS (tarjetas animadas) (plegables bonitos) (plegables) -->
     <section id="mision" class="relative z-10 bg-[var(--niebla)] py-20 md:py-24">
         <div class="max-w-6xl mx-auto px-6">
           <h2 class="text-3xl font-bold mb-12 text-center text-[var(--musgo)]">Misión · Visión · Principios</h2>
@@ -351,7 +350,7 @@
   .logos:hover .logos-track { animation-play-state: paused; }
 </style>
 
-
+<!-- Mapa y Correo -->
     <section id="contacto" class="relative z-10 bg-[var(--rosa)]/30 py-20 md:py-24">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-8 text-center text-[var(--musgo)]">Contacto</h2>
@@ -378,7 +377,12 @@
           </div>
 
           <!-- Formulario a la derecha -->
-          <form class="space-y-6 bg-white p-8 rounded-3xl shadow-xl">
+          <form
+            action="mailto:contacto@splash.cl?subject=Contacto%20desde%20web"
+            method="POST"
+            enctype="text/plain"
+            class="space-y-6 bg-white p-8 rounded-3xl shadow-xl"
+          >
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
               <input type="text" id="name" name="name" required
@@ -476,36 +480,6 @@
       </div>
     </section>
 
-    <!-- Scripts: navegación y traducción -->
-    <script>
-    // Navegación carrusel
-    const revTrack = document.getElementById('revTrack');
-    document.getElementById('revPrev').addEventListener('click', ()=>{
-      revTrack.scrollBy({left: -revTrack.clientWidth * 0.8, behavior: 'smooth'});
-    });
-    document.getElementById('revNext').addEventListener('click', ()=>{
-      revTrack.scrollBy({left: revTrack.clientWidth * 0.8, behavior: 'smooth'});
-    });
-
-    // Toggle traducción
-    document.querySelectorAll('.toggle-translation').forEach(link => {
-      link.dataset.lang = 'es'; // estado inicial
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const p = link.previousElementSibling;
-        if (link.dataset.lang === 'es') {
-          p.textContent = p.dataset.en;
-          link.textContent = 'Ver original (Español)';
-          link.dataset.lang = 'en';
-        } else {
-          p.textContent = p.dataset.es;
-          link.textContent = 'See translation (English)';
-          link.dataset.lang = 'es';
-        }
-      });
-    });
-    </script>
-
     <!-- FOOTER -->
     <footer class="bg-white border-t py-8 text-center text-sm text-slate-500">
       <div class="flex justify-center gap-6 mb-4">
@@ -525,13 +499,52 @@
       &copy; 2025 Casa Escuela Splash · Concepción, Chile
     </footer>
 
-    <!-- SIMPLE FADE CAROUSEL SCRIPT -->
     <script>
-      document.addEventListener('DOMContentLoaded',()=>{
-          const slides=document.querySelectorAll('.slide');let i=0;
-          setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active');},4000);
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1) SIMPLE FADE CAROUSEL
+      const slides = document.querySelectorAll('.slide');
+      let idx = 0;
+      setInterval(() => {
+        slides[idx].classList.remove('active');
+        idx = (idx + 1) % slides.length;
+        slides[idx].classList.add('active');
+      }, 4000);
+
+      // 2) NAVEGACIÓN CARRUSEL DE RESEÑAS
+      const revTrack = document.getElementById('revTrack');
+      const prevBtn  = document.getElementById('revPrev');
+      const nextBtn  = document.getElementById('revNext');
+      if (revTrack && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+          revTrack.scrollBy({ left: -revTrack.clientWidth * 0.8, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+          revTrack.scrollBy({ left:  revTrack.clientWidth * 0.8, behavior: 'smooth' });
+        });
+      }
+
+      // 3) TOGGLE TRADUCCIÓN DE RESEÑAS
+      document.querySelectorAll('.toggle-translation').forEach(link => {
+        link.dataset.lang = 'es';
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const p = link.previousElementSibling;
+          if (link.dataset.lang === 'es') {
+            p.textContent   = p.dataset.en;
+            link.textContent = 'Ver original (Español)';
+            link.dataset.lang = 'en';
+          } else {
+            p.textContent   = p.dataset.es;
+            link.textContent = 'See translation (English)';
+            link.dataset.lang = 'es';
+          }
+        });
       });
+    });
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init(); </script>
+
     
   </body>
 </html>
