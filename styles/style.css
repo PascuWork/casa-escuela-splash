@@ -210,6 +210,94 @@ img {
   fill: var(--musgo);
   vertical-align: middle;
 }
+/* 16.1 Estilos inmersivos para sección de equipo */
+.equipo-experiencia {
+  background-color: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.equipo-experiencia:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+.equipo-experiencia-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.equipo-experiencia-info {
+  padding: 1.25rem;
+}
+.equipo-experiencia-info h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #2e2e2e;
+}
+.equipo-experiencia-info .rol {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .equipo-experiencia-img {
+    height: 220px;
+  }
+}
+
+/* 16.2 Estilos sección EQUIPO */
+#equipo .equipo-card {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#equipo .equipo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+#equipo .equipo-img {
+  border-radius: 1.25rem;
+  object-fit: cover;
+  width: 100%;
+  height: 16rem;
+  margin-bottom: 1rem;
+}
+#equipo .equipo-img.round {
+  border-radius: 9999px;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto 1rem;
+}
+#equipo .equipo-nombre {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+#equipo .equipo-rol {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+#equipo .descripcion {
+  font-size: 0.75rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive imagen en móviles */
+@media (max-width: 768px) {
+  #equipo .equipo-img {
+    height: 12rem;
+  }
+}
+
 
 /* 17. Media Queries */
 @media (max-width: 768px) {

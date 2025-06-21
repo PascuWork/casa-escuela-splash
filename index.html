@@ -199,65 +199,202 @@
         </div>
     </section>
 
-    <!-- SERVICIOS (cards) -->
+    <!-- SERVICIOS -->
     <section id="servicios" class="relative z-10 bg-[var(--cielo)]/40 py-20 md:py-24">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-12 text-center text-[var(--musgo)]">Servicios</h2>
+
         <div class="grid gap-10 lg:grid-cols-4 sm:grid-cols-2">
-          <!-- Sala de Cowork (primero) -->
-          <article class="group rounded-3xl overflow-hidden shadow-xl bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="img/servicio-cowork.jpg" alt="Sala de Cowork" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+
+          <!-- Espacio Cowork -->
+          <article class="group bg-white rounded-3xl overflow-hidden shadow-xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="img/servicio-cowork.jpg" alt="Espacio Cowork" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             <div class="p-6 text-center">
-              <h4 class="flex items-center justify-center gap-2 font-bold text-lg text-[var(--arena)]"><span>💻</span>Espacio Cowork</h4>
-              <p class="text-sm mt-2">Área de teletrabajo para familias con wifi y café ilimitado.</p>
+              <h4 class="flex justify-center items-center gap-2 font-bold text-lg text-[var(--arena)]">
+                <span>💻</span>Espacio Cowork
+              </h4>
+              <p class="text-xs mt-2">Incluye:</p>
+              <ul class="text-xs text-gray-700 mt-1 space-y-1 list-disc list-inside text-left">
+                <li>Área de <strong>teletrabajo familiar</strong></li>
+                <li>Conexión wifi</li>
+                <li>Café ilimitado</li>
+              </ul>
             </div>
           </article>
 
-          <!-- Escuela (sustituye Jardín) -->
-          <article class="group rounded-3xl overflow-hidden shadow-xl bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="img/servicio-escuela.jpg" alt="Escuela infantil" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <!-- Escuela Infantil -->
+          <article class="group bg-white rounded-3xl overflow-hidden shadow-xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="img/servicio-escuela.jpg" alt="Escuela Infantil" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             <div class="p-6 text-center">
-              <h4 class="flex items-center justify-center gap-2 font-bold text-sm md:text-base text-[var(--musgo)]"><span>🏫</span>ESCUELA · SALA CUNA, PRE‑KÍNDER, KÍNDER, 1º–2º BÁSICO</h4>
-              <p class="text-xs mt-2 leading-relaxed">
-                Jornadas:<br>AM 8:30‑13:30 · Media 8:30‑16:00 · Completa 8:30‑18:30
-              </p>
+              <h4 class="flex justify-center items-center gap-2 font-bold text-xs md:text-base text-[var(--musgo)]">
+                <span>🏫</span>Sala cuna a 2º básico
+              </h4>
+              <p class="text-xs mt-2 leading-relaxed">Jornadas disponibles:</p>
+              <ul class="text-xs text-gray-700 mt-1 space-y-1 list-disc list-inside text-left">
+                <li><strong>AM:</strong> 8:30 – 13:30 horas</li>
+                <li><strong>Media:</strong> 8:30 – 16:00 horas</li>
+                <li><strong>Completa:</strong> 8:30 – 18:30 horas</li>
+              </ul>
             </div>
           </article>
 
-          <!-- After School -->
-          <article class="group rounded-3xl overflow-hidden shadow-xl bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="img/servicio-afterschool.jpg" alt="After School" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <!-- After‑School -->
+          <article class="group bg-white rounded-3xl overflow-hidden shadow-xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="img/servicio-afterschool.jpg" alt="After-School" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             <div class="p-6 text-center">
-              <h4 class="flex items-center justify-center gap-2 font-bold text-lg text-[var(--lavanda)]"><span>🚌</span>After‑School</h4>
-              <p class="text-sm mt-2">Programa vespertino (15:30‑18:30) con apoyo de tareas, juego libre y colación saludable.</p>
+              <h4 class="flex justify-center items-center gap-2 font-bold text-lg text-[var(--lavanda)]">
+                <span>🚌</span>After‑School
+              </h4>
+              <p class="text-xs mt-2">Incluye:</p>
+              <ul class="text-xs text-gray-700 mt-1 space-y-1 list-disc list-inside text-left">
+                <li>Horario: <strong>14:00 – 18:30 horas</strong></li>
+                <li>Apoyo en tareas escolares</li>
+                <li>Juego libre guiado</li>
+                <li>Colación saludable</li>
+              </ul>
             </div>
           </article>
 
           <!-- Talleres Artísticos -->
-          <article class="group rounded-3xl overflow-hidden shadow-xl bg-white transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="img/servicio-talleres.jpg" alt="Talleres artísticos" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <article class="group bg-white rounded-3xl overflow-hidden shadow-xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <img src="img/servicio-talleres.jpg" alt="Talleres Artísticos" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             <div class="p-6 text-center">
-              <h4 class="flex items-center justify-center gap-2 font-bold text-lg text-[var(--rosa)]"><span>🎨</span>Talleres Artísticos</h4>
-              <p class="text-sm mt-2">Clases de arte, música y expresión corporal para infancias **y** adultos.</p>
+              <h4 class="flex justify-center items-center gap-2 font-bold text-lg text-[var(--rosa)]">
+                <span>🎨</span>Talleres Artísticos
+              </h4>
+              <p class="text-xs mt-2">Ofrecemos:</p>
+              <ul class="text-xs text-gray-700 mt-1 space-y-1 list-disc list-inside text-left">
+                <li>Clases de <strong>arte infantil</strong></li>
+                <li>Música y expresión corporal</li>
+                <li>Espacios para <strong>adultos y niños</strong></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+<!-- SECCIÓN EQUIPO - EXPERIENCIA INMERSIVA -->
+    <section id="equipo" class="relative w-full">
+      <!-- BLOQUE VISUAL 1: Guías Educadoras -->
+      <div class="relative bg-[var(--arena)]/20 py-24">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-[var(--musgo)]">Guías Educadoras</h2>
+           <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">Conócenos, acompañamos el aprendizaje con amor, arte y juego.</p>
+        </div>
+        <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-8 px-6 max-w-6xl mx-auto">
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA EDUCADORA ANTONIA CHAVEZ.jpg" alt="Antonia Chávez" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Antonia Chávez</h3>
+              <p class="rol">Guía Educadora</p>
+            </div>
+          </article>
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA EDUCADORA NOELIA CAPILLA.jpg" alt="Noelia Capilla" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Noelia Capilla</h3>
+              <p class="rol">Guía Educadora</p>
+            </div>
+          </article>
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA EDUCADORA TANIA ZIEBALLE.jpg" alt="Tania Zieballe" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Tania Zieballe</h3>
+              <p class="rol">Guía Educadora</p>
+            </div>
+          </article>
+        </div>
+        <svg class="absolute bottom-0 w-full" viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path fill="var(--lavanda)" d="M0,64L60,58.7C120,53,240,43,360,37.3C480,32,600,32,720,42.7C840,53,960,75,1080,80C1200,85,1320,75,1380,64L1440,54L1440,0L0,0Z" />
+        </svg>
+      </div>
+
+      <!-- BLOQUE VISUAL 2: Especialistas -->
+      <div class="relative bg-[var(--lavanda)]/10 py-24">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-[var(--musgo)]">Especialistas</h2>
+        </div>
+        <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-8 px-6 max-w-7xl mx-auto">
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA IDIOMAS VALERIA ARRIAZA.jpg" alt="Valeria Arriaza" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Valeria Arriaza</h3>
+              <p class="rol">Guía de Idiomas</p>
+            </div>
+          </article>
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA CIENCIAS Y BALLET DORY TOLEDO.jpg" alt="Dory Toledo" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Dory Toledo</h3>
+              <p class="rol">Ciencias y Ballet</p>
+            </div>
+          </article>
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA ENFOQUE INTEGRAL TIARE OBREQUE.jpg" alt="Tiare Obreque" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Tiare Obreque</h3>
+              <p class="rol">Guía Enfoque Integral</p>
+            </div>
+          </article>
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA MUSICAL IVON LAGOS.jpg" alt="Ivon Lagos" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Ivon Lagos</h3>
+              <p class="rol">Guía Musical</p>
+            </div>
+          </article>
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA ARTES CIRCENSES JOSELYN MUÑOZ.jpg" alt="Joselyn Muñoz" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Joselyn Muñoz</h3>
+              <p class="rol">Guía Artes Circenses</p>
+            </div>
+          </article>
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA AFTER SCHOOL VALENTINA DIAZ.jpg" alt="Valentina Díaz" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Valentina Díaz</h3>
+              <p class="rol">Guía After School</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- BLOQUE VISUAL 3: Practicantes -->
+      <div class="relative bg-[var(--lavanda)]/10 py-24">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-[var(--musgo)]">Practicantes</h2>
+        </div>
+        <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-8 px-6 max-w-7xl mx-auto">
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA IDIOMAS VALERIA ARRIAZA.jpg" alt="Valeria Arriaza" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Constanza</h3>
+              <p class="rol">Estudiante en práctica UCSC</p>
+            </div>
+          </article>
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA CIENCIAS Y BALLET DORY TOLEDO.jpg" alt="Dory Toledo" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Javiera</h3>
+              <p class="rol">Estudiante en práctica UCSC</p>
+            </div>
+          </article>
+          <article class="equipo-experiencia">
+            <img src="img/equipo/GUIA ENFOQUE INTEGRAL TIARE OBREQUE.jpg" alt="Tiare Obreque" class="equipo-experiencia-img">
+            <div class="equipo-experiencia-info">
+              <h3>Katalina</h3>
+              <p class="rol">Estudiante en práctica UCSC</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- EQUIPO (placeholder con fotos) -->
-    <section id="equipo" class="relative z-10 bg-[var(--cielo)]/30 py-20 md:py-24">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center text-[var(--musgo)]">Nuestro Equipo</h2>
-        <div class="grid gap-10 md:grid-cols-3">
-          <!-- Guías -->
-          <article class="text-center"><img src="img/guia1.jpg" class="mx-auto rounded-full h-40 w-40 object-cover mb-4" alt="Guía educadora 1" loading="lazy"><h3 class="font-semibold">Nombre Guía 1</h3><p class="text-xs text-slate-600">Educadora de párvulos</p></article>
-          <article class="text-center"><img src="img/guia2.jpg" class="mx-auto rounded-full h-40 w-40 object-cover mb-4" alt="Guía educadora 2" loading="lazy"><h3 class="font-semibold">Nombre Guía 2</h3><p class="text-xs text-slate-600">Educadora de párvulos</p></article>
-          <!-- Estudiantes en práctica -->
-          <article class="text-center"><img src="img/practicante-group.jpg" class="mx-auto rounded-full h-40 w-40 object-cover mb-4" alt="Estudiantes en práctica" loading="lazy"><h3 class="font-semibold">Estudiantes en práctica</h3><p class="text-xs text-slate-600">Futuros educadores U.</p></article>
-        </div>
-      </div>
-    </section>
+
+
 
     <!-- REDES DE COLABORACIÓN ------------------------------------------->
     <section id="convenios" class="relative z-10 bg-[var(--niebla)] py-20 md:py-24">
@@ -425,6 +562,35 @@
       </div>
     </section>
 
+    <!-- SECCIÓN DIRECCIÓN - FUNDADORES -->
+    <section id="direccion" class="relative bg-gradient-to-br from-[var(--lavanda)]/40 to-[var(--niebla)] py-24">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl font-extrabold text-[var(--musgo)] tracking-tight">FUNDADORES</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">Quienes impulsan y dan vida a este proyecto educativo.</p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-10 px-6 max-w-7xl mx-auto">
+        <article class="equipo-experiencia">
+          <img src="img/equipo/DIRECTORA Y FUNDADORA CONSTANZA VALENCIA.jpg" alt="Constanza Valencia" class="equipo-experiencia-img">
+          <div class="equipo-experiencia-info">
+            <h3>Constanza Valencia</h3>
+            <p class="rol">Directora y Fundadora</p>
+          </div>
+        </article>
+        <article class="equipo-experiencia">
+          <img src="img/equipo/CO-FUNDADOR GABRIEL COSIO MARIN.jpg" alt="Gabriel Cosío" class="equipo-experiencia-img">
+          <div class="equipo-experiencia-info">
+            <h3>Gabriel Cosío</h3>
+            <p class="rol">Cofundador</p>
+          </div>
+        </article>
+      </div>
+
+      <svg class="absolute bottom-0 w-full" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path fill="var(--arena)" d="M0,64L48,58.7C96,53,192,43,288,37.3C384,32,480,32,576,42.7C672,53,768,75,864,80C960,85,1056,75,1152,64C1248,53,1344,43,1392,37.3L1440,32L1440,0L0,0Z" />
+      </svg>
+    </section>
+    
     <!-- REVIEWS (Google mock, tarjetas horizontales con flechas y traducción) -->
     <section id="reviews" class="relative z-10 bg-[var(--niebla)] py-20 md:py-24">
       <div class="max-w-5xl mx-auto px-6 relative">
