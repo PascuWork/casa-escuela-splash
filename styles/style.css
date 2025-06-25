@@ -8,12 +8,12 @@
   --rosa: #F6D9D5;
 }
 
-/* 2. Reset y tipografía global */
+/* 2. Reset y tipografía */
 html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background: var(--niebla);
   color: #111;
   margin: 0;
@@ -25,96 +25,68 @@ header {
   position: sticky;
   top: 0;
   z-index: 30;
-  /* fondo semitransparente con el color de --niebla al 90% de opacidad */
-  background-color: rgba(242, 244, 241, 0.2);
-  /* difuminado de lo que queda detrás */
+  background-color: rgba(242, 244, 241, 0.9);
   backdrop-filter: blur(10px);
-  /* línea muy tenue con 20% de opacidad */
   border-bottom: 1px solid rgba(168, 198, 161, 0.2);
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
 }
 
-
 /* 4. Navegación */
 nav ul {
   list-style: none;
   display: flex;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 nav a {
   text-decoration: none;
   color: #333;
 }
-
-/* 5. Hero (si lo usas con clase .hero) */
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: #f0f4ff;
+nav a:hover {
+  color: var(--musgo);
 }
 
-/* 6. Secciones */
+/* 5. Secciones generales */
 section {
-  padding: 2rem;
+  padding: 4rem 1.5rem;
 }
-
-/* Contenedor centrado solo en pantallas grandes */
 .section-inner {
-  /* en móviles ocupa el 100% */
-  width: 100%;
-  padding: 0 1rem; /* un poco de espacio a los lados */
-  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* a partir de 768px centramos y limitamos ancho */
-@media (min-width: 768px) {
-  .section-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0; /* el padding lo maneja el section */
-  }
-}
-
-
-/* 7. Footer */
+/* 6. Footer */
 footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.875rem;
   background-color: #fafafa;
   border-top: 1px solid #eee;
+  color: #666;
 }
 
-/* 8. Animaciones y utilidades */
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-.spin {
-  animation: spin 28s linear infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-.float {
-  animation: float 5s ease-in-out infinite;
+/* 7. Animaciones */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* 9. Carrusel fade (hero) */
-.slide {
+.fade-up {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.slide.active {
-  opacity: 1;
+  animation: fadeUp 0.8s ease-out forwards;
 }
 
-/* 10. Carrusel logos (scroll infinito) */
+/* 8. Carrusel logos */
 @keyframes scrollX {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-50% - 1.25rem)); }
@@ -137,199 +109,98 @@ footer {
   flex-shrink: 0;
 }
 
-/* 11. Botones */
-button {
+/* 9. Tarjetas */
+.card {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow-y: auto;
+  max-height: 400px;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--musgo);
+}
+.card-title.lavanda {
+  color: var(--lavanda);
+}
+.card-title.rosa {
+  color: var(--rosa);
+}
+.card p,
+.card ul {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 10. Botones */
+button,
+.btn {
   background-color: var(--musgo);
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
   cursor: pointer;
-  transition: filter 0.3s ease;
+  transition: background-color 0.3s ease;
 }
-button:hover {
-  filter: brightness(90%);
+button:hover,
+.btn:hover {
+  background-color: var(--arena);
 }
 
-/* 12. Formularios */
-input, textarea {
+/* 11. Formularios */
+input,
+textarea {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
+  font-family: inherit;
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: var(--musgo);
   outline: none;
 }
 
-/* 13. Tablas */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-}
-table th, table td {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-table th {
-  background-color: var(--cielo);
-  color: #333;
-}
-table tr:nth-child(even) {
-  background-color: var(--arena);
-}
-table tr:hover {
-  background-color: var(--lavanda);
-}
-
-/* 14. Listas */
-ul, ol {
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* 15. Imágenes */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* 16. Iconos */
-.icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: var(--musgo);
-  vertical-align: middle;
-}
-/* 16.1 Estilos inmersivos para sección de equipo */
-.equipo-experiencia {
-  background-color: white;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.equipo-experiencia:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-}
-.equipo-experiencia-img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-.equipo-experiencia-info {
-  padding: 1.25rem;
-}
-.equipo-experiencia-info h3 {
-  font-size: 1.125rem;
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-  color: #2e2e2e;
-}
-.equipo-experiencia-info .rol {
-  font-size: 0.875rem;
-  color: #6b7280;
-}
-
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .equipo-experiencia-img {
-    height: 220px;
-  }
-}
-
-/* 16.2 Estilos sección EQUIPO */
-#equipo .equipo-card {
-  background-color: white;
-  border-radius: 1.5rem;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#equipo .equipo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-}
-#equipo .equipo-img {
-  border-radius: 1.25rem;
-  object-fit: cover;
-  width: 100%;
-  height: 16rem;
-  margin-bottom: 1rem;
-}
-#equipo .equipo-img.round {
-  border-radius: 9999px;
-  width: 10rem;
-  height: 10rem;
-  margin: 0 auto 1rem;
-}
-#equipo .equipo-nombre {
-  font-size: 1.125rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 0.25rem;
-}
-#equipo .equipo-rol {
-  font-size: 0.875rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-#equipo .descripcion {
-  font-size: 0.75rem;
-  color: #888;
-  font-style: italic;
-}
-
-/* Responsive imagen en móviles */
-@media (max-width: 768px) {
-  #equipo .equipo-img {
-    height: 12rem;
-  }
-}
-
-
-/* 17. Media Queries */
+/* 12. Responsive básico */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
   }
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
   }
-  .hero {
+  section {
     padding: 2rem 1rem;
   }
-  section {
-    padding: 1rem;
-  }
 }
 
-/* 18. Accesibilidad */
-:focus {
-  outline: 2px solid var(--musgo);
-  outline-offset: 2px;
-}
-
-/* 19. Tema oscuro */
+/* 13. Tema oscuro */
 @media (prefers-color-scheme: dark) {
   body {
     background: #111;
     color: #f0f0f0;
   }
-  header, footer {
+  header,
+  footer {
     background-color: #222;
     border-color: #444;
   }
@@ -340,11 +211,27 @@ img {
     background-color: #333;
     color: #eee;
   }
-  table th {
-    background-color: var(--cielo);
-    color: #111;
-  }
-  table tr:nth-child(even) {
-    background-color: var(--arena);
-  }
+}
+
+/* 14. Accesibilidad */
+:focus {
+  outline: 2px solid var(--musgo);
+  outline-offset: 2px;
+}
+/* 15. Imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slide {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
 }
