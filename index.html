@@ -520,7 +520,67 @@
       </div>
     </section>
 
+    <!-- Mapa y Correo -->
+    <section id="contacto" class="relative z-10 bg-[var(--rosa)]/30 py-20 md:py-24">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center text-[var(--musgo)]">Contacto</h2>
+        <div class="grid gap-12 md:grid-cols-2 items-start">
 
+          <!-- Mapa a la izquierda -->
+          <div>
+            <div class="w-full h-80 rounded-3xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://maps.google.com/maps?q=Casa%20Escuela%20Splash%20-%20Los%20Aguilera%20225%2C%204030000%20Concepci%C3%B3n%2C%20B%C3%ADo%20B%C3%ADo&z=15&output=embed"
+                width="100%" height="100%" frameborder="0" style="border:0;"
+                allowfullscreen loading="lazy" class="rounded-3xl"
+              ></iframe>
+            </div>
+            <div class="text-center mt-4">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Casa+Escuela+Splash+-+Los+Aguilera+225%2C+4030000+Concepci%C3%B3n%2C+Bi%C3%B1o+Bi%C3%B1o"
+                target="_blank"
+                class="inline-block bg-[var(--musgo)] hover:bg-[var(--arena)] transition text-white font-semibold px-6 py-3 rounded-full shadow-lg"
+              >
+                Cómo llegar
+              </a>
+            </div>
+          </div>
+
+          <!-- Formulario a la derecha -->
+          <form
+            action="mailto:contacto@splash.cl?subject=Contacto%20desde%20web"
+            method="POST"
+            enctype="text/plain"
+            class="space-y-6 bg-white p-8 rounded-3xl shadow-xl"
+          >
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+              <input type="text" id="name" name="name" required
+                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-[var(--musgo)] focus:ring focus:ring-[var(--musgo)]/50"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+              <input type="email" id="email" name="email" required
+                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-[var(--musgo)] focus:ring focus:ring-[var(--musgo)]/50"
+              />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+              <textarea id="message" name="message" rows="4" required
+                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-[var(--musgo)] focus:ring focus:ring-[var(--musgo)]/50"
+              ></textarea>
+            </div>
+            <button type="submit"
+              class="w-full inline-block bg-[var(--musgo)] hover:bg-[var(--arena)] transition text-white font-semibold px-6 py-3 rounded-full shadow-lg"
+            >
+              Enviar mensaje
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
 
     
     <!-- REVIEWS (Google mock, tarjetas horizontales con flechas y traducción) -->
